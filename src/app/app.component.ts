@@ -3,8 +3,16 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { upcomingEvents } from '../pages/upcomingEvents/upcomingEvents';
+import { PastEventsPage } from '../pages/past-events/past-events';
+import { SocialMediaPage } from '../pages/social-media/social-media';
+import { InteractionRoutePage } from '../pages/interaction-route/interaction-route';
+import { PosterRoutePage } from '../pages/poster-route/poster-route';
+import { YourPromotersPage } from '../pages/your-promoters/your-promoters';
+import { SettingsPage } from '../pages/settings/settings';
+
+import firebase from 'firebase';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +20,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +29,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Upcoming Events', component: upcomingEvents },
+      { title: 'Past Events', component: PastEventsPage },
+      { title: 'Social Media Campaigns', component: SocialMediaPage },
+      { title: 'Interaction Routes', component: InteractionRoutePage },
+      { title: 'Poster Routes', component: PosterRoutePage },
+      { title: 'Your Promoters', component: YourPromotersPage },
+      { title: 'Settings', component: SettingsPage }
     ];
 
   }
