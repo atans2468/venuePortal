@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { CreateEventPage } from '../create-event/create-event';
 
 @Component({
   selector: 'page-upcomingEvents',
@@ -11,6 +12,10 @@ export class upcomingEvents {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  createEventPage(){
+    this.navCtrl.push(CreateEventPage);
   }
 
 }

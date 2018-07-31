@@ -12,6 +12,7 @@ import { InteractionRoutePage } from '../pages/interaction-route/interaction-rou
 import { PosterRoutePage } from '../pages/poster-route/poster-route';
 import { YourPromotersPage } from '../pages/your-promoters/your-promoters';
 import { SettingsPage } from '../pages/settings/settings';
+import { CreateEventPage } from '../pages/create-event/create-event';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -45,7 +46,8 @@ firebase.firestore().settings({
     InteractionRoutePage,
     PosterRoutePage,
     YourPromotersPage,
-    SettingsPage
+    SettingsPage,
+    CreateEventPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ firebase.firestore().settings({
     InteractionRoutePage,
     PosterRoutePage,
     YourPromotersPage,
-    SettingsPage
+    SettingsPage,
+    CreateEventPage
   ],
   providers: [
     StatusBar,
